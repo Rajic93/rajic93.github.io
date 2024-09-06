@@ -24,7 +24,14 @@ export enum Skill {
     REST = 'REST',
 }
 
-const ProjectTemplate = ({ title, type, image, skills = [] }) => {
+interface ProjectTemplateProps {
+    title: string;
+    type: ProjectType;
+    image?: string;
+    skills?: Skill[];
+}
+
+const ProjectTemplate = ({ title, type, image, skills = [] }: ProjectTemplateProps) => {
     return (
         <div className="project">
             <img src={image} alt="" className="project-image"/>
