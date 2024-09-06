@@ -33,6 +33,8 @@ jobs:
 
       - name: Push to release branch
         run: |
+          git config --global user.email "aleksandar.v.rajic@gmail.com"
+          git config --global user.name "Aleksandar Rajic"
           rm -rf build/
           mkdir build
           mv dist/* build/
