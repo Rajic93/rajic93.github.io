@@ -33,6 +33,7 @@ jobs:
 
       - name: Push to release branch
         run: |
+          rm -rf build/
           mkdir build
           mv dist/* build/
           git add .
