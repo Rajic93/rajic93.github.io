@@ -18,7 +18,7 @@ const Info = () => {
         <div className="section section--dark">
             <div className="section-content">
                 <div className="about-picture">
-                    <img src="src/assets/alex.jpeg" alt="alex" className="profile_picture"/>
+                    <img src="https://github.com/Rajic93/rajic93.github.io/blob/main/src/assets/alex.jpeg" alt="alex" className="profile_picture"/>
                 </div>
                 <div className="about-principles">
                     <ul className="about-list">
