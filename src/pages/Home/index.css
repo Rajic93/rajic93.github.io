@@ -35,6 +35,10 @@
     flex-direction: column;
 }
 
+.section--relative {
+    position: relative;
+}
+
 @media (max-width: 400px) {
     .section-content {
         flex-direction: column;
@@ -151,4 +155,11 @@
 .show-right--position {
     position: absolute;
     left: -64px;
+}
+
+.fullscreen-icon {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
 }

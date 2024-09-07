@@ -1,24 +1,25 @@
 import {useState} from "react";
-const contents: Record<string, string> = {
-    challenges: 'Challenges excite me, which is why I pursued a career in software engineering.',
-    proactivity: 'I go beyond just completing tasks. I aim to add value and think ahead to prevent potential issues.',
-    learning: 'I believe every skill can be mastered with dedication, and I continually seek to expand my expertise.',
-    standalone: 'I maintain efficient processes to ensure hyper-productivity and timely delivery.',
+type ContentsType = Record<string, string>;
+
+export interface InfoProps {
+    imageUrl: string;
+    contents: ContentsType;
 }
 
-const Info = () => {
+const Info = ({ imageUrl, contents }: InfoProps) => {
     const [contentId, setContentId] = useState('');
     const [content, setContent] = useState('');
-    console.log({ content })
+
     const onItemClick = (id: string) => {
         setContent(id === contentId ? '' : contents[id]);
         setContentId(id === contentId ? '' : id);
     }
+
     return (
         <div className="section section--dark">
             <div className="section-content">
                 <div className="about-picture">
-                    <img src="https://github.com/Rajic93/rajic93.github.io/blob/main/src/assets/alex.jpeg" alt="aleksandar rajic" className="profile_picture"/>
+                    <img src={imageUrl} alt="aleksandar rajic" className="profile_picture"/>
                 </div>
                 <div className="about-principles">
                     <ul className="about-list">
